@@ -18,3 +18,4 @@ jobs:
           instruction: ${{ github.event.inputs.instruction }}
           app_id: ${{ secrets.CLAUDE_CODE_APP_ID }}
           private_key: ${{ secrets.CLAUDE_CODE_PRIVATE_KEY }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}  # ← Agrega esta línea
