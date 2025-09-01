@@ -1,0 +1,20 @@
+name: Claude Code
+
+on:
+  workflow_dispatch:
+    inputs:
+      instruction:
+        description: 'Instruction for Claude'
+        required: true
+        type: string
+
+jobs:
+  claude-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: anthropics/claude-code-action@main
+        with:
+          instruction: ${{ github.event.inputs.instruction }}
+          app_id: ${{ secrets.CLAUDE_CODE_APP_ID }}
+          private_key: ${{ secrets.CLAUDE_CODE_PRIVATE_KEY }}
