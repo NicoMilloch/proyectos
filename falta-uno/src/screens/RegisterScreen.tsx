@@ -117,7 +117,7 @@ export default function RegisterScreen({ navigation }: any) {
               placeholder="Contraseña"
               value={password}
               onChangeText={setPassword}
-              secureTextEntry
+              secureTextEntry={true}
               editable={!loading}
             />
 
@@ -126,7 +126,7 @@ export default function RegisterScreen({ navigation }: any) {
               placeholder="Confirmar contraseña"
               value={confirmPassword}
               onChangeText={setConfirmPassword}
-              secureTextEntry
+              secureTextEntry={true}
               editable={!loading}
             />
 

@@ -58,7 +58,7 @@ export default function LoginScreen({ navigation }: any) {
             placeholder="Contraseña"
             value={password}
             onChangeText={setPassword}
-            secureTextEntry
+            secureTextEntry={true}
             editable={!loading}
           />
 
